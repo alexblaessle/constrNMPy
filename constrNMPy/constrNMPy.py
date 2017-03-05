@@ -101,10 +101,10 @@ def constrNM(func,x0,LB,UB,args=(),xtol=0.0001, ftol=0.0001, maxiter=None, maxfu
 	
 def constrObjFunc(x,func,LB,UB,args):
 	
-	"""Objective function when using Constrained Nelder-Mead.
+	r"""Objective function when using Constrained Nelder-Mead.
 	
 	Calls :py:func:`TransformX` to transform ``x`` into
-	constrained version, then calls objective function ``func`.
+	constrained version, then calls objective function ``func``.
 	
 	Args:
 		x (numpy.ndarray): Input vector.
@@ -128,9 +128,9 @@ def constrObjFunc(x,func,LB,UB,args):
 	
 def transformX(x,LB,UB,offset=1E-20):
 	
-	"""Transforms ``x`` into constrained form, obeying upper bounds ``UB`` and lower bounds ``LB``.
+	r"""Transforms ``x`` into constrained form, obeying upper bounds ``UB`` and lower bounds ``LB``.
 	
-	.. note:: Will add tiny offset to LB if ``LB[i]``=0, to avoid singularities.
+	.. note:: Will add tiny offset to LB if ``LB[i]=0``, to avoid singularities.
 	
 	Idea taken from http://www.mathworks.com/matlabcentral/fileexchange/8277-fminsearchbnd--fminsearchcon
 	
@@ -199,7 +199,7 @@ def transformX(x,LB,UB,offset=1E-20):
 		
 def transformX0(x0,LB,UB):
 	
-	"""Transforms ``x0`` into constrained form, obeying upper bounds ``UB`` and lower bounds ``LB``.
+	r"""Transforms ``x0`` into constrained form, obeying upper bounds ``UB`` and lower bounds ``LB``.
 	
 	Idea taken from http://www.mathworks.com/matlabcentral/fileexchange/8277-fminsearchbnd--fminsearchcon
 	

@@ -5,5 +5,8 @@ constrNMPy/scripts/
 build/
 dist/
 
-#Dont push egg
+# Don't push egg
 *.egg-info
+
+# Don't push shell scripts
+*.sh
