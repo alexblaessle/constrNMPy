@@ -20,6 +20,25 @@ import os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
 
+#If on RTD, mock some stuff
+if os.environ.get('READTHEDOCS', None) == 'True':
+	import mock
+	MOCK_MODULES = [
+			#numpy
+			'numpy','numpy.core','numpy.core.multiarray',
+			#Scipy
+			'scipy','scipy.optimize','scipy.interpolate','scipy.ndimage','scipy.ndimage.interpolation',
+			#Matplotlib (and all submodules)
+			'matplotlib', 'matplotlib.pyplot','matplotlib.axes','mpl_toolkits','mpl_toolkits.mplot3d','matplotlib.collections',
+			'matplotlib.patches','matplotlib.tri','matplotlib.backends','matplotlib.backends.backend_qt4agg',
+			'matplotlib.bakends.backend_qt4agg.FigureCanvasQTAgg','matplotlib.backends.backend_qt4agg.FigureCanvas',
+			'matplotlib.figure']
+
+	#sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
+
+	for mod_name in MOCK_MODULES:
+		sys.modules[mod_name] = mock.Mock()
+
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
