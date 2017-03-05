@@ -1,0 +1,9 @@
+# Don't scripts folder
+constrNMPy/scripts/
+
+# Don't push build folders
+build/
+dist/
+
+#Dont push egg
+*.egg-info
