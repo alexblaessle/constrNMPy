@@ -35,7 +35,7 @@ to optimize a rosenbrock function with a given range for `x` and `y`
 # Define initial guess
 x0=[2.5,2.5]
 
-# Define lower and upper bounds
+# Define lower and upper bounds (None indicates no bound)
 LB=[2,2]
 UB=[None,3]
 
@@ -59,4 +59,5 @@ pytest constrNMPy/tests/
 ```
 ## API
 
-The API of  can be found [here]() .
+The API of  can be found [here](http://constrnmpy.readthedocs.io/en/latest/modules.html) .
+
