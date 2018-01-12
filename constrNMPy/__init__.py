@@ -5,6 +5,6 @@ constNMPy: A Python package for constrained Nelder-Mead optimization.
 """
 
 #Basic PyFRAP modules
-from constrNMPy import *
+from .constrNMPy import *
 from . import test_funcs
 

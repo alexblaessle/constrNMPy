@@ -273,14 +273,14 @@ def printAttr(name,attr,maxL=5):
 
 	if isinstance(attr,(list)):
 		if len(attr)>maxL:
-			print name, " = ", getListDetailsString(attr)
+			print(name, " = ", getListDetailsString(attr))
 			return True
 	elif isinstance(attr,(np.ndarray)):
 		if min(attr.shape)>maxL:
-			print name, " = ", getArrayDetailsString(attr)
+			print(name, " = ", getArrayDetailsString(attr))
 			return True
 		
-	print name, " = ", attr
+	print(name, " = ", attr)
 		
 	return True	
 
