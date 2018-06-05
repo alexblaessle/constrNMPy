@@ -57,10 +57,17 @@ def constrNM(func,x0,LB,UB,args=(),xtol=0.0001, ftol=0.0001, maxiter=None, maxfu
 	
 	# Check if x0 is within bounds
 	for i,x in enumerate(x0):
-		if not ((x>LB[i] or LB[i]==None) and (x<UB[i] or UB[i]==None)):
-			errStr='Initial guess x0['+str(i)+']='+str(x)+' out of bounds.'
-			raise ValueError(errStr)
-	
+		
+		if LB[i] is not None:
+			if x<LB[i]:
+				errStr='Initial guess x0['+str(i)+']='+str(x)+' out of bounds.'
+                        	raise ValueError(errStr)	
+		
+		if UB[i] is not None:
+			if x>UB[i]:
+				errStr='Initial guess x0['+str(i)+']='+str(x)+' out of bounds.'
+                        	raise ValueError(errStr)
+
 	# Transform x0
 	x0=transformX0(x0,LB,UB)
 	
