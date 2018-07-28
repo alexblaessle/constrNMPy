@@ -10,3 +10,7 @@ dist/
 
 # Don't push shell scripts
 *.sh
+
+# vs code 
+*.cache
+*.vscode
