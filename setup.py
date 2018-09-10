@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='constrNMPy',
-      version='0.1',
+      version='0.2',
       description='A Python package for constrained Nelder-Mead optimization.',
       url='https://github.com/alexblaessle/constNMPy',
       author='Alexander Blaessle',

@@ -1,21 +1,21 @@
 """Example script for a simple optimization using constrNM.
 
-We want to find the minimum of a shifted two dimensionsal quadrativ function with constraints -10<x and -10<y<10. 
+We want to find the minimum of a shifted two dimensionsal quadrativ function with constraints -10<x and -10<y<10.
 
 This example should illustrate how to pass option arguments to constrNM.
 
 """
 
 # Import modules
-import constrNMPy as cNM 
+import constrNMPy as cNM
 import matplotlib.pyplot as plt
 import numpy as np
 
 def obj(x,a):
-	
-	"""Objective function."""
-	
-	return (x[0]-a)**2+x[1]**2
+
+    """Objective function."""
+
+    return (x[0]-a)**2+x[1]**2
 
 # Parameters
 a=5
@@ -51,4 +51,3 @@ res=cNM.constrNM(obj,x0,LB,UB,full_output=True,args=[a])
 
 # Print results
 cNM.printDict(res)
-
